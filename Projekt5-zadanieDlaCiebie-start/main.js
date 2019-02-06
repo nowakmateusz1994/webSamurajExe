@@ -11,8 +11,8 @@ const showMessage = (e) => {
     const text = e.target.value;
     div.textContent = '';
     passwords.forEach((password, index) => {
-        password = password.toLowerCase();
-        if (text == password) {
+
+        if (text.toLowerCase() == password.toLowerCase()) {
             div.textContent = messages[index];
             e.target.value = '';
         } else {
