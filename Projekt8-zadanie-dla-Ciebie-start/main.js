@@ -30,8 +30,8 @@ const addLetter = () => {
         }
         setTimeout(function () {
             spanText.textContent = '';
-            setTimeout(addLetter, 500)
-        }, 500)
+            addLetter();
+        }, 2000)
 
     }
 
