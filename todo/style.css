@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: darkgreen;
+}
+
+form {
+    width: 80%;
+    height: 4rem;
+    background: lime;
+    line-height: 4rem;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    margin: 10px auto;
+}
+
+form input {
+    width: 60%;
+    height: 3rem;
+
+}
+
+form button {
+    font-size: 1.5rem;
+    height: 2rem;
+    padding: 0 .5rem;
+}
+
+div.lookFor {
+    width: 80%;
+    height: 2rem;
+    background: greenyellow;
+    line-height: 2rem;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    margin: 10px auto 0 auto;
+}
+
+ul {
+    display: block;
+    width: 80%;
+    background: greenyellow;
+    line-height: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    padding: 0 10px 0 5px;
+    border-bottom: 1px solid black
+}
+
+li button {
+    flex: 0 0 50px;
+    padding: 0 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    order: 1;
+    height: 1.5rem;
+    align-self: center;
+}
+
+li p {
+    flex: 0 0 calc(80% - 100px - 10px);
+    order: 0;
+}

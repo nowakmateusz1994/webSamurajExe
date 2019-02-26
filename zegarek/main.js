@@ -21,6 +21,7 @@ counter.addEventListener('click', () => {
 })
 
 
+
 //watch
 
 const currentHours = () => {
@@ -91,23 +92,24 @@ let secondsToStop = '00';
 const counting = (e) => {
     e.preventDefault();
 
+
+    if (input.value === '') return;
     minutesToStop = input.value;
-    if (minutesToStop) {
-        counterH1.textContent = `${minutesToStop} : ${secondsToStop}`;
-        minutesToStop--;
-        secondsToStop = 60;
-        input.value = '';
-        indexCounter = setInterval(counterNow, 1000);
-    }
+    counterH1.textContent = `${minutesToStop} : ${secondsToStop}`;
+    minutesToStop--;
+    secondsToStop = 60;
+    input.value = '';
+    indexCounter = setInterval(counterNow, 1000);
+
 
 }
 
 const counterNow = () => {
     secondsToStop--
     counterH1.textContent = `${minutesToStop} : ${secondsToStop}`;
-    if (secondsToStop == 0 && minutesToStop == 0) {
+    if (secondsToStop <= 0 && minutesToStop <= 0) {
         clearInterval(indexCounter);
-        counterH1.textContent = 'START'
+        counterH1.textContent = '---'
     }
     if (secondsToStop == 0) {
 
